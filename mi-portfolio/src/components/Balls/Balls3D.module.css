@@ -1,0 +1,214 @@
+.Balls3D {
+  padding: 2rem;
+  text-align: center;
+}
+
+.canvasContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.canvasWrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-texto-claro);
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necesario para posicionar pseudo-elementos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canvas::before,
+.canvas::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  background: radial-gradient(
+    rgba(222, 247, 121, 0.311),
+    rgba(74, 228, 255, 0.422)
+  );
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none; /* Que no interfiera con los eventos */
+}
+
+.canvas:hover::before,
+.canvas:hover::after {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+  animation: lightPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes lightPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.insideBall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.projectImageWrapper {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #8000ff 80%,
+    #8f069c 100%
+  );
+  border: 4px solid rgba(230, 246, 248, 0.5);
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5),
+    /* Luz interna */ 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra externa */
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.projectImagesWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.projectImage {
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.projectImageWrapper:hover {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.7),
+    0 10px 20px rgba(128, 0, 255, 0.5);
+  transform: scale(3);
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.projectImageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.projectCard {
+  background: linear-gradient(45deg, #8000ff, #8f069c);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.projectResumeCard {
+  background: linear-gradient(45deg, #602e0a, #e6f6f8);
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectResumeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.projectDescription {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.projectDescription p {
+  margin: 0;
+}
+
+.projectLink {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #8f06ff, #4b0099);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectLink:hover {
+  background: linear-gradient(45deg, #d946ef, #a011ff);
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
