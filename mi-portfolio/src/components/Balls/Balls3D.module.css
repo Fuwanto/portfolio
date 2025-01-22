@@ -1,8 +1,34 @@
 .Balls3D {
   padding: 2rem;
   text-align: center;
-  background-color: var(--color-fondo);
-  background-image: url("src/assets/estrellas.png");
+  background: linear-gradient(
+    180deg,
+    var(--color-principal),
+    var(--color-fondo),
+    var(--color-fondo)
+  );
+}
+
+.titleContainer {
+  background: linear-gradient(
+    135deg,
+    var(--color-fondo),
+    var(--color-principal)
+  );
+  border-radius: 50%;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  padding: 1.5rem;
+  box-shadow: 0 8px 15px var(--color-principal);
+}
+
+.Balls3D h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--fuente-principal), cursive;
 }
 
 .canvasContainer {
@@ -77,28 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   text-align: center;
-}
-
-.projectImageWrapper {
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(
-    circle at center,
-    var(--color-texto-claro) 0%,
-    var(--color-principal) 80%,
-    var(--color-secundario) 100%
-  );
-  border: 4px solid var(--color-borde-destello);
-  border-radius: 50%;
-  box-shadow: inset 0 0 15px var(--color-hover-destello),
-    0 5px 15px var(--color-sombra-externa);
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  transition: transform var(--transicion), box-shadow var(--transicion);
 }
 
 .projectImagesWrapper {
@@ -108,115 +113,104 @@
 }
 
 .projectImage {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  transform: scale(1.05);
+  width: 100%;
+  height: 100%;
+}
+
+.projectImageWrapper {
+  width: 100px;
+  height: 100px;
+  border: 4px solid var(--color-borde-destello);
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px var(--color-hover-destello),
+    0 5px 15px var(--color-sombra-externa);
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  filter: blur(1.5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
 
 .projectImageWrapper:hover {
   box-shadow: inset 0 0 20px var(--color-hover-destello),
-    0 10px 40px var(--color-principal);
-  transform: scale(3);
-  z-index: 100;
+    0 10px 40px var(--color-secundario);
+  transform: scale(2.5);
+  filter: blur(0);
+  z-index: 10;
 }
 
-.projectImageWrapper::after {
-  content: "";
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  width: 50%;
-  height: 50%;
-  background: radial-gradient(circle, var(--color-hover-destello), transparent);
-  border-radius: 50%;
-  pointer-events: none;
-  box-shadow: 0 0 15px var(--color-hover-destello);
+.projectImageLink {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .projectCard {
-  background: linear-gradient(
-    90deg,
+  background: radial-gradient(
+    circle,
     var(--color-principal),
-    var(--color-secundario)
+    var(--color-fondo)
   );
-  border-radius: 12px;
+  border-radius: 10%;
   padding: 1.5rem;
   margin-top: 1.5rem;
-  box-shadow: 0 8px 15px var(--color-sombra-externa);
+  box-shadow: 0 8px 15px var(--color-principal);
   transition: transform var(--transicion), box-shadow var(--transicion);
 }
 
 .projectCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 20px var(--color-sombra-externa);
+  box-shadow: 0 12px 20px var(--color-secundario);
 }
 
-.projectResumeCard {
-  background: linear-gradient(45deg, #602e0a, var(--color-fondo));
-  border: 2px solid var(--color-texto-claro);
-  border-radius: 12px;
-  padding: 1rem;
-  margin-top: 1rem;
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000000;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+}
+
+.modalContent {
+  background: var(--color-principal);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px var(--color-sombra-externa);
+  position: relative;
   text-align: center;
-  box-shadow: 0 4px 6px var(--color-sombra-externa);
-  transition: transform var(--transicion), box-shadow var(--transicion);
-}
-
-.projectResumeCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px var(--color-sombra-externa);
-}
-
-.projectDescription {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: var(--color-fondo);
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  display: block;
-  transition: max-height var(--transicion);
-}
-
-.projectDescription p {
-  margin: 0;
-}
-
-.projectLink {
-  display: inline-block;
-  text-decoration: none;
   color: var(--color-texto-claro);
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(
-    45deg,
-    var(--color-secundario),
-    var(--color-principal)
-  );
-  border-radius: 20px;
-  box-shadow: 0 4px 6px var(--color-sombra-externa);
-  transition: background var(--transicion), transform var(--transicion),
-    box-shadow var(--transicion);
+  font-family: var(--fuente-principal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.projectLink:hover {
-  background: linear-gradient(45deg, #d946ef, var(--color-secundario));
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px var(--color-sombra-externa);
+.techList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: var(--color-principal);
-  color: var(--color-texto-claro);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color var(--transicion);
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-button:hover {
-  background-color: var(--color-secundario);
+.techImage {
+  width: 24px;
+  height: 24px;
 }

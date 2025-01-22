@@ -27,17 +27,21 @@ export const Ball = ({ project }) => {
       <Html
         position={[0, 0, 1.5]}
         wrapperClass={styles.insideBall}
-        center
         distanceFactor={8}
+        transform={false}
       >
         <div className={styles.projectImagesWrapper}>
-          {project.tec.map((tec, index) => (
+          {project.tech.map((tech, index) => (
             <div key={index} className={styles.projectImageWrapper}>
-              {/* Envolvemos la imagen en un enlace */}
-              <a href={tec.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={tech.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectImageLink}
+              >
                 <img
-                  src={tec.image}
-                  alt={tec.name}
+                  src={tech.image}
+                  alt={tech.name}
                   className={styles.projectImage}
                 />
               </a>

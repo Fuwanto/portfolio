@@ -3,74 +3,25 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import styles from "./Balls3D.module.css";
 import { Ball } from "./Ball";
+import projects from "../../info_proyectos/projects";
 
 const Balls3D = () => {
-  const [openProjectId, setOpenProjectId] = useState(null); // Controlar qué proyecto está desplegado
+  const [openProject, setOpenProject] = useState(null); // Controlar el proyecto abierto
 
-  const projects = [
-    {
-      id: 1,
-      name: "Proyecto 1",
-      description: "Descripción del Proyecto 1",
-      tec: [
-        {
-          name: "React",
-          image: "src/assets/react.svg",
-          url: "https://es.react.dev/",
-        },
-        {
-          name: "React",
-          image: "src/assets/react.svg",
-          url: "https://es.react.dev/",
-        },
-      ],
-      link: "https://github.com/Fuwanto",
-    },
-    {
-      id: 2,
-      name: "Proyecto 2",
-      description: "Descripción del Proyecto 2",
-      tec: [
-        {
-          name: "React",
-          image: "src/assets/react.svg",
-          url: "https://es.react.dev/",
-        },
-        {
-          name: "React",
-          image: "src/assets/react.svg",
-          url: "https://es.react.dev/",
-        },
-      ],
-      link: "https://github.com/Fuwanto",
-    },
-    {
-      id: 3,
-      name: "Proyecto 3",
-      description: "Descripción del Proyecto 3",
-      tec: [
-        {
-          name: "React",
-          image: "src/assets/react.svg",
-          url: "https://es.react.dev/",
-        },
-        {
-          name: "React",
-          image: "src/assets/react.svg",
-          url: "https://es.react.dev/",
-        },
-      ],
-      link: "https://github.com/Fuwanto",
-    },
-  ];
+  const handleOpenModal = (project) => {
+    setOpenProject(project); // Abrir el modal con el proyecto seleccionado
+  };
 
-  const handleToggleDropdown = (id) => {
-    setOpenProjectId(openProjectId === id ? null : id); // Si el proyecto ya está abierto, cerrarlo
+  const handleCloseModal = () => {
+    setOpenProject(null); // Cerrar el modal
   };
 
   return (
     <section className={styles.Balls3D}>
-      <h2>Proyectos</h2>
+      <div className={styles.titleContainer}>
+        <h2>Proyectos</h2>
+      </div>
+
       <div className={styles.canvasContainer}>
         {projects.map((project) => (
           <div key={project.id} className={styles.projectCard}>
@@ -86,31 +37,53 @@ const Balls3D = () => {
                 <Ball project={project} />
               </Canvas>
             </div>
-            {/* Botón para abrir/cerrar el desplegable */}
+            {/* Botón para abrir el modal */}
             <button
-              onClick={() => handleToggleDropdown(project.id)} // Alterna el estado del desplegable
+              onClick={() => handleOpenModal(project)} // Abrir modal con datos del proyecto
               className={styles.projectLink}
             >
               {project.name}
             </button>
-
-            {/* Descripción del proyecto (desplegable) */}
-            {openProjectId === project.id && (
-              <div className={styles.projectDescription}>
-                <p>{project.description}</p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.projectLink}
-                >
-                  Ver más en GitHub
-                </a>
-              </div>
-            )}
           </div>
         ))}
       </div>
+
+      {/* Modal */}
+      {openProject && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContent}>
+            <button onClick={handleCloseModal}>&times;</button>
+            <h3>{openProject.name}</h3>
+            <p>{openProject.description}</p>
+            <ul className={styles.techList}>
+              {openProject.tech.map((tech, index) => (
+                <li key={index} className={styles.techItem}>
+                  <a
+                    href={tech.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.techLink}
+                  >
+                    <img
+                      src={tech.image}
+                      alt={tech.name}
+                      className={styles.techImage}
+                    />
+                    {tech.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={openProject.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver más en GitHub
+            </a>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
