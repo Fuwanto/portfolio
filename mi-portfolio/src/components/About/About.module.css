@@ -1,15 +1,15 @@
 .about {
   text-align: center;
   padding: 2rem;
-  background: #1b1b2f;
-  color: #fff;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-claro);
 }
 
 .about h2 {
   font-size: 2.5rem;
-  color: #d1a9ff;
+  color: var(--color-secundario);
   margin-bottom: 1rem;
-  font-family: "Cinzel Decorative", cursive;
+  font-family: var(--fuente-principal), cursive;
 }
 
 .about .content {

@@ -1,8 +1,8 @@
 .footer {
   text-align: center;
   padding: 1rem;
-  background: #3b0d62;
-  color: #fff;
-  border-top: 2px solid #8a56ce;
-  font-family: "Cinzel Decorative", cursive;
+  background: var(--color-principal);
+  color: var(--color-texto-claro);
+  border-top: 2px solid var(--color-secundario);
+  font-family: var(--fuente-principal), cursive;
 }

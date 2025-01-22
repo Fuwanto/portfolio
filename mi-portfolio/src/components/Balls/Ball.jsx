@@ -7,7 +7,10 @@ import styles from "./Balls3D.module.css";
 export const Ball = ({ project }) => {
   const sphereRef = useRef();
 
-  const neptuneTexture = useLoader(THREE.TextureLoader, "/public/Neptune.jpg");
+  const neptuneTexture = useLoader(
+    THREE.TextureLoader,
+    "/public/2k_earth_daymap.jpg"
+  );
 
   // Animar rotación de la esfera
   useFrame(() => {

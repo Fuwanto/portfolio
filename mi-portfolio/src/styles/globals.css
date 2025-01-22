@@ -1,13 +1,22 @@
 :root {
-  --color-fondo: #e6e6e6;
-  --color-principal: #5a3d89;
-  --color-secundario: #d96b6b;
-  --color-texto: #1e1e1e;
+  --color-principal: #2a1b6a;
+  --color-secundario: #710e79;
+  --color-texto: #e0e7ff;
   --color-texto-claro: #ffffff;
+  --color-fondo: #12002b;
+
+  --color-destello: rgba(176, 67, 245, 0.4);
+  --color-destello-secundario: rgba(86, 232, 255, 0.5);
+  --color-hover-destello: rgba(255, 255, 255, 0.8);
+  --color-borde-destello: rgba(145, 50, 204, 0.5);
+  --color-sombra-externa: rgba(0, 0, 0, 0.6);
 
   --fuente-principal: "Poppins", sans-serif;
+
+  --transicion: 0.3s ease;
 }
 
+/* Reset y estilos base */
 * {
   margin: 0;
   padding: 0;
