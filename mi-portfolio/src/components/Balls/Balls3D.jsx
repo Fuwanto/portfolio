@@ -79,7 +79,7 @@ const Balls3D = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver más en GitHub
+              Visitar
             </a>
           </div>
         </div>

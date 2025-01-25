@@ -1,25 +1,41 @@
 .about {
+  margin-top: 20px;
   text-align: center;
-  padding: 2rem;
-  background-color: var(--color-fondo);
+  padding: 3rem 2rem;
+  background: linear-gradient(
+    180deg,
+    var(--color-secundario),
+    var(--color-fondo) 20%
+  );
   color: var(--color-texto-claro);
-
-  border: 4px dotted var(--color-secundario);
+  border-radius: 10%;
+  box-shadow: 10px 10px 20px var(--color-principal);
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  color: var(--color-secundario);
-  margin-bottom: 1rem;
-  font-family: var(--fuente-principal), cursive;
-}
-
-.about .content {
-  max-width: 600px;
+.content {
+  max-width: 800px;
   margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 10px;
+  font-size: 1.3rem;
+  line-height: 2;
+  background: var(--color-fondo);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-destello-secundario);
+  box-shadow: 0 6px 12px var(--color-borde-destello);
+  transition: transform var(--transicion);
+}
+
+.content:hover {
+  transform: scale(1.02);
+}
+
+.about .content p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about .content p span {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px var(--color-secundario);
 }

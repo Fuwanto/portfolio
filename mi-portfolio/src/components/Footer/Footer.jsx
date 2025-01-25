@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        Creado con 💜 por{" "}
+        Hecho con{" "}
+        <span role="img" aria-label="corazón">
+          💜
+        </span>{" "}
+        por <br />
         <a
           href="https://github.com/Fuwanto"
           target="_blank"
@@ -13,7 +17,6 @@ const Footer = () => {
         >
           Fuwanto
         </a>
-        .
       </p>
     </footer>
   );

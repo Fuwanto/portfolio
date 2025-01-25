@@ -4,15 +4,24 @@ import styles from "./About.module.css";
 const About = () => {
   return (
     <section className={styles.about}>
-      <h2>Sobre Mí</h2>
       <div className={styles.content}>
         <p>
-          ¡Hola! Soy Antonella, una desarrolladora apasionada por la creación de
-          aplicaciones que sean tanto funcionales como fascinantes. Me encanta
-          diseñar soluciones que no solo resuelvan problemas, sino que también
-          ofrezcan experiencias únicas, como los planetas que giran alrededor de
-          las estrellas. Cada línea de código que escribo está pensada para
-          explorar nuevos horizontes y brindar lo mejor a los usuarios.
+          <span>¡Hola!</span> Soy <span>Antonella</span>, una
+          <span> desarrolladora </span> apasionada por la creación de
+          <span> aplicaciones </span> que combinan <span> funcionalidad </span>y{" "}
+          <span> creatividad</span>. Mi objetivo es diseñar
+          <span> soluciones únicas </span> que no solo resuelvan problemas, sino
+          que también ofrezcan <span> experiencias memorables</span>, como los{" "}
+          <span> planetas </span> que orbitan alrededor de las
+          <span> estrellas</span>.
+        </p>
+        <p>
+          Cada <span> línea de código </span> que escribo es una oportunidad
+          para <span> explorar </span> nuevos horizontes y ofrecer
+          <span> valor real </span> a los <span> usuarios</span>. Mi enfoque
+          está en <span> innovar</span>, <span> superar límites</span> y
+          convertir <span> ideas </span> en
+          <span> realidades sorprendentes</span>.
         </p>
       </div>
     </section>

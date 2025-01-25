@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Sphere, Html } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import * as THREE from "three";
@@ -7,9 +7,13 @@ import styles from "./Balls3D.module.css";
 export const Ball = ({ project }) => {
   const sphereRef = useRef();
 
-  const neptuneTexture = useLoader(
+  // Cargar textura de la esfera segun si es de dia o de noche
+
+  const hour = new Date().getHours();
+  const isNight = hour >= 19 || hour < 6;
+  const ballTexture = useLoader(
     THREE.TextureLoader,
-    "/public/2k_earth_daymap.jpg"
+    isNight ? "2k_earth_nightmap.jpg" : "2k_earth_daymap.jpg"
   );
 
   // Animar rotación de la esfera
@@ -21,7 +25,7 @@ export const Ball = ({ project }) => {
 
   return (
     <Sphere ref={sphereRef} args={[2, 128, 128]} scale={2.5}>
-      <meshStandardMaterial map={neptuneTexture} />
+      <meshStandardMaterial map={ballTexture} />
 
       {/* HTML dentro de la bola */}
       <Html

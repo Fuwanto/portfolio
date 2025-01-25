@@ -1,8 +1,19 @@
 .footer {
+  margin-top: 20px;
   text-align: center;
-  padding: 1rem;
-  background: var(--color-principal);
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-principal),
+    var(--color-secundario)
+  );
   color: var(--color-texto-claro);
-  border-top: 2px solid var(--color-secundario);
+  border-top: 3px solid var(--color-secundario);
   font-family: var(--fuente-principal), cursive;
+  box-shadow: 0 -6px 12px var(--color-borde-destello);
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin: 0;
 }
