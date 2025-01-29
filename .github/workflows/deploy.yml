@@ -1,0 +1,37 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # O la rama que estés usando
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the app
+        run: npm run build
+        env:
+          VITE_EMAIL: ${{ secrets.VITE_EMAIL }}
+          VITE_PHONE: ${{ secrets.VITE_PHONE }}
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+        env:
+          VITE_EMAIL: ${{ secrets.VITE_EMAIL }}
+          VITE_PHONE: ${{ secrets.VITE_PHONE }}
