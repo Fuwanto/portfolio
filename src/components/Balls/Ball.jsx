@@ -13,7 +13,9 @@ export const Ball = ({ project }) => {
   const isNight = hour >= 19 || hour < 6;
   const ballTexture = useLoader(
     THREE.TextureLoader,
-    isNight ? "2k_earth_nightmap.jpg" : "2k_earth_daymap.jpg"
+    isNight
+      ? "/portfolio/2k_earth_nightmap.jpg"
+      : "/portfolio/2k_earth_daymap.jpg"
   );
 
   // Animar rotación de la esfera

@@ -8,7 +8,7 @@ import Contact from "./components/Contact/Contact";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Header />
       <main>
         <Routes>
