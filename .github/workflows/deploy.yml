@@ -19,8 +19,8 @@ jobs:
 
       - name: Create .env
         run: |
-          echo "VITE_EMAIL=${{ secrets.VITE_EMAIL }}" >> .env
-          echo "VITE_PHONE=${{ secrets.VITE_PHONE }}" >> .env
+          echo "VITE_EMAIL=${{ secrets.VITE_EMAIL }}" >> .env.production
+          echo "VITE_PHONE=${{ secrets.VITE_PHONE }}" >> .env.production
 
       - name: Install dependencies
         run: npm install
@@ -28,13 +28,12 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          touch dist/.nojekyll  # Important for SPAs
+          touch dist/.nojekyll
 
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./dist
           force_orphan: true
-          keep_files: false
