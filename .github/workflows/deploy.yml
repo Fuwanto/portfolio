@@ -28,6 +28,7 @@ jobs:
       - name: Build project
         run: |
           npm run build
+          cp public/404.html dist/
           touch dist/.nojekyll
 
       - name: Deploy to GH Pages
