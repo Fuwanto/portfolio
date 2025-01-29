@@ -1,0 +1,41 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Clonar el repositorio
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      # Paso 2: Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22.x"
+
+      # Paso 3: Instalar las dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 4: Crear el build de la aplicación
+      - name: Build the app
+        run: npm run build
+
+      # Paso 5: Desplegar a GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # Rama donde se desplegarán los archivos estáticos
+          folder: dist # Carpeta donde se genera el build
+
+      # Paso 6: Limpiar archivos sensibles
+      - name: Clean up secrets
+        run: rm -f .env # Elimina archivos de entorno o secretos que no quieras subir
+
