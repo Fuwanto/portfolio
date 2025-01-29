@@ -1,10 +1,11 @@
-# ¡Bienvenido a mi Portfolio!
+## Imágenes utilizadas
 
-Soy Antonella, una desarrolladora apasionada por crear aplicaciones que combinan funcionalidad y creatividad. En este espacio, puedes explorar algunos de mis proyectos, diseñados para ofrecer soluciones únicas y experiencias memorables.
+Aquí encontrarás algunas imágenes fascinantes que representan la belleza de nuestro planeta y más allá:
 
-🚀 **Explora mi trabajo** y descubre cómo el código y la creatividad se alinean en este viaje a través del universo digital.
+- **Mapa del día de la Tierra** 🌍: ![2k_earth_daymap](https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg)  
+  ¡Mira la Tierra iluminada por el sol! Un vistazo al lado brillante de nuestro planeta.
 
-Visita mi portfolio en línea:  
-[mi portfolio](https://fuwanto.github.io/portfolio/)
+- **Mapa nocturno de la Tierra** 🌙: ![2k_earth_nightmap](https://www.solarsystemscope.com/textures/download/2k_earth_nightmap.jpg)  
+  La magia de la Tierra vista desde el espacio, con las luces de las ciudades brillando en la oscuridad.
 
-¡Gracias por visitar y espero que disfrutes el recorrido! 🌟
+(Gracias a [Solar System Scope](https://www.solarsystemscope.com/textures/) por las increíbles texturas)
