@@ -9,15 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "22.x"
 
-      - name: Create .env file
+      - name: Create .env
         run: |
           echo "VITE_EMAIL=${{ secrets.VITE_EMAIL }}" >> .env
           echo "VITE_PHONE=${{ secrets.VITE_PHONE }}" >> .env
@@ -25,12 +25,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build the app
-        run: npm run build
+      - name: Build project
+        run: |
+          npm run build
+          touch dist/.nojekyll  # Important for SPAs
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_branch: gh-pages
-          publish_dir: dist
           github_token: ${{ secrets.GH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          force_orphan: true
+          keep_files: false
