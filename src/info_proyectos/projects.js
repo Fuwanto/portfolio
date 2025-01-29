@@ -7,17 +7,17 @@ const projects = [
     tech: [
       {
         name: "Flask",
-        image: "src/assets/flask.png",
+        image: "/portfolio/flask.png",
         url: "https://flask.palletsprojects.com/en/stable/",
       },
       {
         name: "Vuejs",
-        image: "src/assets/vuejs.png",
+        image: "/portfolio/vuejs.png",
         url: "https://vuejs.org/",
       },
       {
         name: "postgresql",
-        image: "src/assets/postgresql.png",
+        image: "/portfolio/postgresql.png",
         url: "https://www.postgresql.org/",
       },
     ],
@@ -31,32 +31,32 @@ const projects = [
     tech: [
       {
         name: "Github",
-        image: "src/assets/github.png",
+        image: "/portfolio/github.png",
         url: "https://github.com/",
       },
       {
         name: "Python",
-        image: "src/assets/python.png",
+        image: "/portfolio/python.png",
         url: "https://www.python.org/",
       },
       {
         name: "Java",
-        image: "src/assets/java.png",
+        image: "/portfolio/java.png",
         url: "https://www.java.com/",
       },
       {
         name: "JavaScript",
-        image: "src/assets/javascript.png",
+        image: "/portfolio/javascript.png",
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         name: "HTML",
-        image: "src/assets/html.png",
+        image: "/portfolio/html.png",
         url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
         name: "CSS",
-        image: "src/assets/css.png",
+        image: "/portfolio/css.png",
         url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       },
     ],

@@ -52,7 +52,6 @@ const Balls3D = () => {
       {openProject && (
         <div className={styles.modalOverlay}>
           <div className={styles.modalContent}>
-            <button onClick={handleCloseModal}>&times;</button>
             <h3>{openProject.name}</h3>
             <p>{openProject.description}</p>
             <ul className={styles.techList}>
@@ -74,13 +73,18 @@ const Balls3D = () => {
                 </li>
               ))}
             </ul>
-            <a
-              href={openProject.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visitar
-            </a>
+
+            <div className={styles.visitAndCloseContainer}>
+              <a
+                href={openProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.visitLinkContainer}
+              >
+                Visitar
+              </a>
+              <button onClick={handleCloseModal}>Salir</button>
+            </div>
           </div>
         </div>
       )}
