@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -8,6 +9,28 @@ const Header = () => {
         Bienvenidos a mi <span>Universo</span>
       </h1>
       <p>Descubre mis proyectos y la magia detrás del código ✨</p>
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <Link to="/">Sobre mí</Link>
+          </li>
+          <li>
+            <Link to="/projects">Proyectos</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contacto</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className={styles.cvButtons}>
+        <a href="/CV-ES.pdf" download className={styles.cvButton}>
+          📄 CV Español
+        </a>
+        <a href="/CV-ENG.pdf" download className={styles.cvButton}>
+          📄 CV Inglés
+        </a>
+      </div>
     </header>
   );
 };
