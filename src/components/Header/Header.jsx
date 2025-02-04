@@ -24,10 +24,10 @@ const Header = () => {
       </nav>
 
       <div className={styles.cvButtons}>
-        <a href="/CV-ES.pdf" download className={styles.cvButton}>
+        <a href="/portfolio/CV-ES.pdf" download className={styles.cvButton}>
           📄 CV Español
         </a>
-        <a href="/CV-ENG.pdf" download className={styles.cvButton}>
+        <a href="/portfolio/CV-ENG.pdf" download className={styles.cvButton}>
           📄 CV Inglés
         </a>
       </div>
