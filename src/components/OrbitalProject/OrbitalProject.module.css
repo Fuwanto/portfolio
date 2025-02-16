@@ -1,0 +1,36 @@
+.techContainer {
+  transition: all 0.2s ease-out;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.techTooltip {
+  background: var(--color-fondo);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-borde-destello);
+  box-shadow: 0 4px 15px var(--color-sombra-externa);
+  backdrop-filter: blur(2px);
+}
+
+.techName {
+  color: var(--color-texto-claro);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px var(--color-sombra-interna);
+  white-space: nowrap;
+  font-family: var(--fuente-secundaria);
+}
+
+.techIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 2px 4px var(--color-sombra-externa));
+}
+
+mesh:hover .techContainer {
+  opacity: 1;
+  transform: translateY(0);
+}

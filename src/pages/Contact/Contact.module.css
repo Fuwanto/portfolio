@@ -1,0 +1,78 @@
+.contact {
+  background: radial-gradient(
+    ellipse at center,
+    var(--color-fondo) 0%,
+    var(--color-secundario) 100%
+  );
+  padding: 3rem 1.5rem;
+  color: var(--color-texto);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  font-family: var(--fuente-principal);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-destello);
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--color-texto-claro);
+}
+
+.contactButton {
+  margin-bottom: 1rem;
+}
+
+.emailButton,
+.whatsappButton {
+  display: inline-block;
+  background: linear-gradient(
+    45deg,
+    var(--color-destello),
+    var(--color-secundario)
+  );
+  color: var(--color-texto-claro);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--color-destello-secundario);
+}
+
+.emailButton:hover,
+.whatsappButton:hover {
+  background: linear-gradient(
+    45deg,
+    var(--color-secundario),
+    var(--color-destello)
+  );
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px var(--color-destello);
+}
+
+.emailButton:active,
+.whatsappButton:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .emailButton,
+  .whatsappButton {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

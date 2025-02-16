@@ -1,0 +1,61 @@
+.projectsSection {
+  background: radial-gradient(
+    ellipse at center,
+    var(--color-fondo) 0%,
+    var(--color-secundario) 100%
+  );
+  padding: 3rem 1.5rem;
+  color: var(--color-texto);
+  min-height: 100vh;
+}
+
+.spaceBackground {
+  position: relative;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--color-sombra-externa);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--fuente-principal);
+  text-transform: uppercase;
+  color: var(--color-destello);
+  letter-spacing: 2px;
+  background: linear-gradient(
+    45deg,
+    var(--color-destello),
+    var(--color-secundario)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--color-texto-claro);
+  margin-top: 1rem;
+}
+
+.cardsFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

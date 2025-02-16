@@ -1,10 +1,9 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
-import Balls3D from "./components/Balls/Balls3D";
-import Contact from "./components/Contact/Contact";
+import About from "./pages/About/About";
+import ProjectsSection from "./pages/ProjectsSection/ProjectsSection";
+import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
@@ -13,7 +12,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/projects" element={<Balls3D />} />
+          <Route path="/projects" element={<ProjectsSection />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

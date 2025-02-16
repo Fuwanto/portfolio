@@ -7,9 +7,9 @@
     var(--color-secundario),
     var(--color-fondo) 20%
   );
-  color: var(--color-texto-claro);
+  color: var(--color-texto);
   border-radius: 10%;
-  box-shadow: 10px 10px 20px var(--color-principal);
+  box-shadow: 10px 10px 20px var(--color-sombra-externa);
 }
 
 .content {
@@ -20,8 +20,8 @@
   background: var(--color-fondo);
   padding: 1.5rem;
   border-radius: 20px;
-  border: 1px solid var(--color-destello-secundario);
-  box-shadow: 0 6px 12px var(--color-borde-destello);
+  border: 1px solid var(--color-borde-destello);
+  box-shadow: 0 6px 12px var(--color-sombra-interna);
   transition: transform var(--transicion);
 }
 
@@ -36,6 +36,6 @@
 
 .about .content p span {
   font-weight: bold;
-  color: white;
-  text-shadow: 0 0 5px var(--color-secundario);
+  color: var(--color-texto-claro);
+  text-shadow: 0 0 5px var(--color-destello);
 }

@@ -1,19 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@300;500&display=swap");
+
 :root {
-  --color-principal: #2a1b6a;
-  --color-secundario: #710e79;
-  --color-texto: #e0e7ff;
-  --color-texto-claro: #ffffff;
-  --color-fondo: #12002b;
+  --fuente-principal: "Orbitron", sans-serif;
+  --fuente-secundaria: "Quicksand", sans-serif;
 
-  --color-destello: rgba(134, 216, 227, 0.151);
-  --color-destello-secundario: rgba(224, 255, 86, 0.075);
-  --color-hover-destello: rgba(255, 255, 255, 0.8);
-  --color-borde-destello: rgba(230, 111, 251, 0.5);
-  --color-sombra-externa: rgb(255, 255, 255);
+  --color-principal: rgba(5, 10, 30, 0.9);
+  --color-secundario: rgba(0, 4, 20, 0.9);
+  --color-texto: white;
+  --color-texto-claro: #e1e5ea;
+  --color-fondo: rgba(0, 0, 0, 0.7);
 
-  --fuente-principal: "Roboto", sans-serif;
+  --color-destello: #00f3ff;
+  --color-destello-secundario: #0066ff;
+  --color-hover-destello: rgba(0, 255, 255, 0.2);
+  --color-borde-destello: rgba(255, 255, 255, 0.1);
+  --color-sombra-externa: rgba(0, 0, 0, 0.3);
+  --color-sombra-interna: rgba(255, 255, 255, 0.3);
+}
 
-  --transicion: 0.3s ease;
+.light-theme {
+  --fuente-principal: "Orbitron", sans-serif;
+  --fuente-secundaria: "Quicksand", sans-serif;
+
+  --color-principal: white;
+  --color-secundario: #f0f0f0;
+  --color-texto: black;
+  --color-texto-claro: #333;
+  --color-fondo: rgba(255, 255, 255, 0.8);
+
+  --color-destello: #00f3ff;
+  --color-destello-secundario: #0066ff;
+  --color-hover-destello: rgba(0, 255, 255, 0.5);
+  --color-borde-destello: rgba(0, 0, 0, 0.1);
+  --color-sombra-externa: rgba(0, 0, 0, 0.2);
+  --color-sombra-interna: rgba(0, 0, 0, 0.1);
 }
 
 /* Reset y estilos base */
@@ -52,7 +72,11 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(45deg, #d946ef, var(--color-secundario));
+  background: linear-gradient(
+    45deg,
+    var(--color-destello-secundario),
+    var(--color-secundario)
+  );
   transform: scale(1.1);
   box-shadow: 0 12px 20px var(--color-sombra-externa),
     0 4px 8px var(--color-sombra-interna);
@@ -77,7 +101,11 @@ a {
 }
 
 a:hover {
-  background: linear-gradient(45deg, #d946ef, var(--color-secundario));
+  background: linear-gradient(
+    45deg,
+    var(--color-destello-secundario),
+    var(--color-secundario)
+  );
   transform: scale(1.05);
   box-shadow: 0 8px 12px var(--color-sombra-externa);
 }

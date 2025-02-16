@@ -1,0 +1,115 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-fondo);
+  z-index: 1000;
+}
+
+.modalContent {
+  background: linear-gradient(
+    45deg,
+    var(--color-destello),
+    var(--color-secundario)
+  );
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 5% auto;
+  color: var(--color-texto-claro);
+  box-shadow: 0 4px 15px var(--color-destello-secundario);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modalHeader h3 {
+  font-size: 2rem;
+  font-family: var(--fuente-principal);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-texto-claro);
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--color-texto-claro);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: var(--color-secundario);
+}
+
+.modalDescription {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-texto);
+}
+
+.techList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.techItem {
+  text-align: center;
+}
+
+.techLink {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-texto-claro);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.techLink:hover {
+  color: var(--color-destello);
+}
+
+.techImage {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
+}
+
+.modalFooter {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.visitLink {
+  background: var(--color-secundario);
+  color: var(--color-texto-claro);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px var(--color-sombra-externa);
+}
+
+.visitLink:hover {
+  background: var(--color-destello);
+  color: var(--color-texto);
+  box-shadow: 0 6px 20px var(--color-destello);
+}
+
+.visitLink:active {
+  transform: scale(0.98);
+}
