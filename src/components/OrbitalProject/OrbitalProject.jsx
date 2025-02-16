@@ -18,7 +18,7 @@ const OrbitalProject = ({ project }) => {
 
   const techTextures = useLoader(
     THREE.TextureLoader,
-    project.tech.map((t) => t.image)
+    project.tech.map((t) => t.image_planet)
   );
 
   useFrame((state, delta) => {
