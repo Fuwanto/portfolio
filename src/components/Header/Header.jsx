@@ -34,7 +34,7 @@ const Header = () => {
           <ul>
             <li>
               <Link to="/" className={styles.navLink}>
-                Sobre mí
+                Inicio
               </Link>
             </li>
             <li>
