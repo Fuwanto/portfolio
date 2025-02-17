@@ -148,7 +148,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
   .title {
     font-size: 2rem;
   }
