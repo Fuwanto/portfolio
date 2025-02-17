@@ -3,7 +3,7 @@
   margin-bottom: 10px;
   background: radial-gradient(
     ellipse at center,
-    var(--color-fondo) 0%,
+    var(--color-fondo) 5%,
     var(--color-secundario) 100%
   );
   padding: 3rem 1.5rem;
