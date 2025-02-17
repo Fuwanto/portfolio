@@ -1,14 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@300;500&display=swap");
-
 :root {
-  --fuente-principal: "Orbitron", sans-serif;
+  --fuente-principal: "Arial", sans-serif;
   --fuente-secundaria: "Quicksand", sans-serif;
 
   --color-principal: rgba(5, 10, 30, 0.9);
   --color-secundario: rgba(0, 4, 20, 0.9);
   --color-texto: white;
   --color-texto-claro: #e1e5ea;
-  --color-fondo: rgba(0, 0, 0, 0.7);
+  --color-fondo: rgba(29, 27, 43, 0.7);
 
   --color-destello: #00f3ff;
   --color-destello-secundario: #0066ff;
@@ -19,7 +17,7 @@
 }
 
 .light-theme {
-  --fuente-principal: "Orbitron", sans-serif;
+  --fuente-principal: "Arial", sans-serif;
   --fuente-secundaria: "Quicksand", sans-serif;
 
   --color-principal: white;

@@ -1,5 +1,6 @@
 .about {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   padding: 3rem 2rem;
   background: linear-gradient(
@@ -8,7 +9,7 @@
     var(--color-fondo) 20%
   );
   color: var(--color-texto);
-  border-radius: 10%;
+  border-radius: 10px;
   box-shadow: 10px 10px 20px var(--color-sombra-externa);
 }
 
