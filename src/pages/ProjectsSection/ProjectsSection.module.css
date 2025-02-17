@@ -1,4 +1,6 @@
 .projectsSection {
+  margin-top: 10px;
+  margin-bottom: 10px;
   background: radial-gradient(
     ellipse at center,
     var(--color-fondo) 0%,
