@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaSun, FaMoon } from "react-icons/fa"; // Importar los iconos
+import { FaSun, FaMoon } from "react-icons/fa";
 import styles from "./Header.module.css";
 
 const Header = () => {
