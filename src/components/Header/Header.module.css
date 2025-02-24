@@ -10,7 +10,6 @@
   border-bottom: 1px solid var(--color-borde-destello);
   box-shadow: 0 4px 15px var(--color-sombra-externa);
   position: relative;
-  border-radius: 10px;
 }
 
 .themeSwitchWrapper {
@@ -148,7 +147,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
   .title {
     font-size: 2rem;
   }
