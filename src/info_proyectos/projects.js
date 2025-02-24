@@ -1,30 +1,42 @@
 const projects = [
   {
     id: 1,
-    name: "Plataforma Web CIDEPINT",
+    name: "Trivia Time!",
     description:
-      "Plataforma web para CIDEPINT con arquitecturas tanto de microservicios como monolítica para comparar rendimiento y escalabilidad.",
+      "Aplicación de trivia con diseño cartoon vibrante, tema claro/oscuro persistente, animaciones fluidas y sistema de puntuación con feedback visual. Utiliza la API de Open Trivia Database para ofrecer preguntas de diversas categorías y niveles de dificultad, con un rendimiento optimizado y diseño 100% responsive.",
     tech: [
       {
-        name: "Flask",
-        image: "/portfolio/flask.png",
-        image_planet: "/portfolio/flask_planet.png",
-        url: "https://flask.palletsprojects.com/en/stable/",
+        name: "Next.js",
+        image: "/portfolio/nextjs.png",
+        image_planet: "/portfolio/nextjs_planet.png",
+        url: "https://nextjs.org/",
       },
       {
-        name: "Vuejs",
-        image: "/portfolio/vuejs.png",
-        image_planet: "/portfolio/vuejs_planet.png",
-        url: "https://vuejs.org/",
+        name: "Tailwind CSS",
+        image: "/portfolio/tailwindcss.png",
+        image_planet: "/portfolio/tailwindcss_planet.png",
+        url: "https://tailwindcss.com/",
       },
       {
-        name: "postgresql",
-        image: "/portfolio/postgresql.png",
-        image_planet: "/portfolio/postgresql_planet.png",
-        url: "https://www.postgresql.org/",
+        name: "TypeScript",
+        image: "/portfolio/typescript.png",
+        image_planet: "/portfolio/typescript_planet.png",
+        url: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "React",
+        image: "/portfolio/react.png",
+        image_planet: "/portfolio/react_planet.png",
+        url: "https://reactjs.org/",
+      },
+      {
+        name: "Vercel",
+        image: "/portfolio/vercel.png",
+        image_planet: "/portfolio/vercel_planet.png",
+        url: "https://vercel.com/",
       },
     ],
-    link: "https://grupo13.proyecto2023.linti.unlp.edu.ar/",
+    link: "https://trivia-app-gilt-six.vercel.app/",
   },
   {
     id: 2,
