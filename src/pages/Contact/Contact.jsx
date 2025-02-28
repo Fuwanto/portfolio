@@ -1,17 +1,17 @@
-import styles from "./Contact.module.css";
+import styles from "./Contact.module.css"
 
 const Contact = () => {
-  const email = import.meta.env.VITE_EMAIL;
-  const phone = import.meta.env.VITE_PHONE;
+  const email = "denisseanto11@hotmail.com"
+  const phone = "+541161516407"
 
-  const subject = encodeURIComponent("Consulta desde tu portafolio");
+  const subject = encodeURIComponent("Consulta desde tu portafolio")
   const body = encodeURIComponent(
     "Hola, me gustaría saber más sobre tu trabajo."
-  );
+  )
 
   const whatsappMessage = encodeURIComponent(
     "Hola, me gustaría saber más sobre tu trabajo."
-  );
+  )
 
   return (
     <section className={styles.contact}>
@@ -41,7 +41,7 @@ const Contact = () => {
         </a>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
