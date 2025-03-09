@@ -1,21 +1,15 @@
 const projects = [
   {
     id: 1,
-    name: "Trivia Time!",
+    name: "Dev-Tree 🌱",
     description:
-      "Aplicación de trivia con diseño cartoon vibrante, tema claro/oscuro persistente, animaciones fluidas y sistema de puntuación con feedback visual. Utiliza la API de Open Trivia Database para ofrecer preguntas de diversas categorías y niveles de dificultad, con un rendimiento optimizado y diseño 100% responsive.",
+      "Un clon de Linktree diseñado para desarrolladores, utilizando tecnologías modernas para una experiencia fluida y personalizable. Cuenta con autenticación, gestión de enlaces y diseño adaptable.",
     tech: [
       {
-        name: "Next.js",
-        image: "/portfolio/nextjs.png",
-        image_planet: "/portfolio/nextjs_planet.png",
-        url: "https://nextjs.org/",
-      },
-      {
-        name: "Tailwind CSS",
-        image: "/portfolio/tailwindcss.png",
-        image_planet: "/portfolio/tailwindcss_planet.png",
-        url: "https://tailwindcss.com/",
+        name: "React",
+        image: "/portfolio/react.png",
+        image_planet: "/portfolio/react_planet.png",
+        url: "https://reactjs.org/",
       },
       {
         name: "TypeScript",
@@ -24,19 +18,31 @@ const projects = [
         url: "https://www.typescriptlang.org/",
       },
       {
-        name: "React",
-        image: "/portfolio/react.png",
-        image_planet: "/portfolio/react_planet.png",
-        url: "https://reactjs.org/",
+        name: "Node.js",
+        image: "/portfolio/nodejs.png",
+        image_planet: "/portfolio/nodejs_planet.png",
+        url: "https://nodejs.org/",
       },
       {
-        name: "Vercel",
-        image: "/portfolio/vercel.png",
-        image_planet: "/portfolio/vercel_planet.png",
-        url: "https://vercel.com/",
+        name: "Express.js",
+        image: "/portfolio/expressjs.png",
+        image_planet: "/portfolio/expressjs_planet.png",
+        url: "https://expressjs.com/",
+      },
+      {
+        name: "MongoDB",
+        image: "/portfolio/mongodb.png",
+        image_planet: "/portfolio/mongodb_planet.png",
+        url: "https://www.mongodb.com/",
+      },
+      {
+        name: "Tailwind CSS v4.0",
+        image: "/portfolio/tailwindcss.png",
+        image_planet: "/portfolio/tailwindcss_planet.png",
+        url: "https://tailwindcss.com/",
       },
     ],
-    link: "https://trivia-app-gilt-six.vercel.app/",
+    link: "https://fuwanto-devtree.netlify.app/",
   },
   {
     id: 2,
@@ -83,6 +89,6 @@ const projects = [
     ],
     link: "https://github.com/Fuwanto",
   },
-];
+]
 
-export default projects;
+export default projects
